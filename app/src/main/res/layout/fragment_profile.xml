@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_profile_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.main.bottomnavbar.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1B80D8FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glProfileLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="15dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glProfileRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="15dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clFriendsContainer"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:background="#B9F6CA"
+            app:layout_constraintBottom_toBottomOf="@+id/tvProfilePicture"
+            app:layout_constraintEnd_toStartOf="@+id/glProfileRight"
+            app:layout_constraintStart_toEndOf="@+id/tvProfilePicture"
+            app:layout_constraintTop_toTopOf="@+id/tvProfilePicture">
+
+            <TextView
+                android:id="@+id/tvFriendsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvFriends"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="Friends"
+                android:textSize="35sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text=""
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvProfilePicture"
+            app:layout_constraintStart_toStartOf="@+id/glProfileLeft" />
+
+        <ImageView
+            android:id="@+id/tvProfilePicture"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/default_profile_picture"
+            app:layout_constraintStart_toStartOf="@+id/glProfileLeft"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="@id/glProfileLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfilePicture" />
+
+        <TextView
+            android:id="@+id/tvLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7sp"
+            android:layout_marginLeft="7sp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textSize="25sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/tvProfilePicture" />
+
+
+        <TextView
+            android:id="@+id/tvBio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ems="11"
+            android:text=""
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="@+id/glProfileLeft"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:text="Logout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:backgroundTint="#64DD17"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditProfile"
+            app:layout_constraintStart_toStartOf="@id/glProfileLeft" />
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="Edit Profile"
+            app:backgroundTint="#536DFE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/glProfileRight"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnLogout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

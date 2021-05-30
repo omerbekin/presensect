@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1033264944758",
+    "project_id": "presensect",
+    "storage_bucket": "presensect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033264944758:android:b07e70eb10f798d279f157",
+        "android_client_info": {
+          "package_name": "com.petophion.presensect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033264944758-2j0iqi17mu9ns4hef7mofu5ne2u7tcmb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOpgnQJlVbHkawU9-UiwZxfwCyNKZtel4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033264944758-2j0iqi17mu9ns4hef7mofu5ne2u7tcmb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
