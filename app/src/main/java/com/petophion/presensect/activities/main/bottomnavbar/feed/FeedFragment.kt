@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.codingwithmitch.kotlinrecyclerviewexample.TopSpacingItemDecoration
+import com.petophion.presensect.TopSpacingItemDecoration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.petophion.presensect.R
@@ -73,20 +73,6 @@ class FeedFragment : Fragment(), FeedRecyclerViewAdapter.OnItemClickListener {
     private fun addDataSet() {
         createDataSet(feedAdapter)
     }
-
-//    fun getDataFromFirestore(feedAdapter: FeedRecyclerViewAdapter) {
-//        val postDataRef = database.collection("posts").whereEqualTo("visible", true)
-//
-//        postDataRef
-//            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
-//                firebaseFirestoreException?.let {
-//                    return@addSnapshotListener
-//                }
-//                querySnapshot?.let { documents ->
-//                    FeedSource.setPostDataToPostList(documents, feedAdapter)
-//                }
-//            }
-//    }
 
     private fun refreshDataFromFirestore(feedAdapter: FeedRecyclerViewAdapter) {
         swipeRefreshLayout.isRefreshing = true
