@@ -1,4 +1,4 @@
-package com.codingwithmitch.kotlinrecyclerviewexample
+package com.petophion.presensect
 
 import android.graphics.Rect
 import android.view.View
