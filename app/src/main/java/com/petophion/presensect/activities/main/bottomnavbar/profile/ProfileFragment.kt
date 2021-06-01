@@ -36,6 +36,8 @@ class ProfileFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        ivProfilePicture.clipToOutline = true
+
         setViewVisibilities()
         getCurrentProfileInfo()
 
@@ -104,7 +106,7 @@ class ProfileFragment : Fragment() {
 
     private fun setInfoDataInViews(infoList: ArrayList<UserInfoDb>) {
 
-        val ivProfilePicture = view?.findViewById<ImageView>(R.id.tvProfilePicture)
+        val ivProfilePicture = view?.findViewById<ImageView>(R.id.ivProfilePicture)
 
         val requestOptions = RequestOptions()
             .placeholder(R.drawable.default_profile_picture)

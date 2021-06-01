@@ -17,6 +17,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.petophion.presensect.R
 import com.petophion.presensect.activities.login.LoginActivity
+import kotlinx.android.synthetic.main.cv_post_preview_image_based.*
 
 class MainActivity : AppCompatActivity() {
 

@@ -5,7 +5,7 @@
     android:id="@+id/clEditProfileContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#CCFF90"
     tools:context=".activities.main.bottomnavbar.profile.EditProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,14 +19,28 @@
 
         <ImageView
             android:id="@+id/ivDecline"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_marginStart="3dp"
             android:layout_marginLeft="3dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:text="Edit Profile"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/btnApply"
+            app:layout_constraintStart_toEndOf="@+id/ivDecline"
+            app:layout_constraintTop_toTopOf="@+id/btnApply" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnApply"
@@ -34,23 +48,26 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:text="APPLY"
-            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#536DFE"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_begin="15dp" />
+            app:layout_constraintGuide_begin="40dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/glRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_end="15dp" />
+            app:layout_constraintGuide_end="40dp" />
 
         <TextView
             android:id="@+id/tvEditUsername"
@@ -60,6 +77,7 @@
             android:text="Username"
             android:textSize="25sp"
             android:textStyle="bold"
+            android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/glRight"
             app:layout_constraintStart_toStartOf="@+id/glLeft"
             app:layout_constraintTop_toTopOf="parent" />
@@ -68,9 +86,10 @@
             android:id="@+id/ivEditProfilePicture"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="90dp"
             android:src="@drawable/default_profile_picture"
             android:scaleType="centerCrop"
+            android:background="@drawable/layout_profile_picture"
             app:layout_constraintEnd_toStartOf="@+id/glRight"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="@+id/glLeft"
@@ -78,36 +97,46 @@
 
         <EditText
             android:id="@+id/etFirstName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="13"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
             android:hint="First name"
-            android:textSize="25sp"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:background="@drawable/layout_edittext"
             app:layout_constraintEnd_toStartOf="@+id/glRight"
             app:layout_constraintStart_toStartOf="@+id/glLeft"
             app:layout_constraintTop_toBottomOf="@+id/ivEditProfilePicture" />
 
         <EditText
             android:id="@+id/etLastName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:ems="13"
             android:hint="Last name"
-            android:textSize="25sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="20sp"
+            android:background="@drawable/layout_edittext"
             app:layout_constraintEnd_toStartOf="@+id/glRight"
             app:layout_constraintStart_toStartOf="@+id/glLeft"
             app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
 
         <EditText
             android:id="@+id/etBio"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="13"
             android:hint="Bio"
-            android:textSize="25sp"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:background="@drawable/layout_edittext"
             app:layout_constraintEnd_toStartOf="@+id/glRight"
             app:layout_constraintStart_toStartOf="@+id/glLeft"
             app:layout_constraintTop_toBottomOf="@+id/etLastName"

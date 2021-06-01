@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1B88FF80">
+        android:background="@drawable/layout_feed_post">
 
 
         <ImageView
@@ -17,7 +17,7 @@
             android:layout_height="23dp"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="8dp"
-            android:background="@color/white"
+            android:background="@drawable/layout_profile_picture"
             android:src="@drawable/default_profile_picture"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +32,11 @@
             android:text="Username"
             android:textColor="@color/black"
             android:textSize="12sp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/layout_feed_username"
             app:layout_constraintBottom_toTopOf="@+id/tvPostTitle"
             app:layout_constraintStart_toEndOf="@id/ivPostProfilePicture"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,6 +50,7 @@
             android:layout_marginBottom="5dp"
             android:text="2 hours ago"
             android:textSize="12sp"
+            android:background="@null"
             app:layout_constraintBottom_toTopOf="@+id/tvPostTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -58,6 +64,7 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:background="@null"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivPostProfilePicture" />
 
@@ -66,8 +73,12 @@
             android:id="@+id/ivPostImage"
             android:layout_width="0dp"
             android:layout_height="370dp"
-            android:background="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:background="@drawable/layout_feed_image"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPostTitle" />
 

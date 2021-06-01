@@ -14,6 +14,7 @@ import com.petophion.presensect.adapters.FeedRecyclerViewAdapter
 import com.petophion.presensect.datasources.FeedSource
 import com.petophion.presensect.datasources.FeedSource.Companion.createDataSet
 import com.petophion.presensect.datasources.FeedSource.Companion.postList
+import kotlinx.android.synthetic.main.cv_post_preview_image_based.*
 import kotlinx.android.synthetic.main.fragment_feed.*
 
 class FeedFragment : Fragment(), FeedRecyclerViewAdapter.OnItemClickListener {
@@ -39,7 +40,6 @@ class FeedFragment : Fragment(), FeedRecyclerViewAdapter.OnItemClickListener {
 
         swipeRefreshLayout.isRefreshing = false
 
-
         swipeRefreshLayout.setOnRefreshListener {
             refreshDataFromFirestore(feedAdapter)
             feedAdapter.notifyDataSetChanged()
@@ -63,7 +63,7 @@ class FeedFragment : Fragment(), FeedRecyclerViewAdapter.OnItemClickListener {
     private fun initRecyclerView() {
         rvFeed.apply {
             layoutManager = LinearLayoutManager(activity)
-            val topSpacingDecorator = TopSpacingItemDecoration(0)
+            val topSpacingDecorator = TopSpacingItemDecoration(15)
             addItemDecoration(topSpacingDecorator)
             adapter = feedAdapter
             setHasFixedSize(true)

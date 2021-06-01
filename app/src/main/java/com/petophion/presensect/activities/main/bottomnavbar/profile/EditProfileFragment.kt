@@ -45,15 +45,16 @@ class EditProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-
-//        val transitionInflater = TransitionInflater.from(requireContext())
-//        enterTransition = transitionInflater.inflateTransition(R.animator.slide_in_left)
-
         return inflater.inflate(R.layout.fragment_edit_profile, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        ivEditProfilePicture.clipToOutline = true
+        etFirstName.clipToOutline = true
+        etLastName.clipToOutline = true
+        etBio.clipToOutline = true
 
         pbEditImageUpload.visibility = View.INVISIBLE
 
@@ -66,7 +67,7 @@ class EditProfileFragment : Fragment() {
         }
 
         ivDecline.setOnClickListener {
-                activity?.onBackPressed()
+            activity?.onBackPressed()
         }
 
         btnApply.setOnClickListener {

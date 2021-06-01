@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:background="#1B80D8FF"
+                android:backgroundTint="#1B80D8FF"
                 android:hint="Last Name"
                 android:inputType="text"
                 android:maxLines="1"

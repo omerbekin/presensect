@@ -42,6 +42,7 @@ class NewPostFragment : Fragment() {
             startActivityForResult(intent, 0)
         }
 
+        ivPostImage.clipToOutline = true
         btnNextFragment.visibility = View.GONE
 
         btnNextFragment.setOnClickListener {

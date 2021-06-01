@@ -5,13 +5,12 @@
     android:id="@+id/cl_profile_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".activities.main.bottomnavbar.profile.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1B80D8FF"
+        android:background="#FAFBFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,58 +30,23 @@
             android:orientation="vertical"
             app:layout_constraintGuide_end="15dp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/clFriendsContainer"
-            android:layout_width="130dp"
-            android:layout_height="100dp"
-            android:background="#B9F6CA"
-            app:layout_constraintBottom_toBottomOf="@+id/tvProfilePicture"
-            app:layout_constraintEnd_toStartOf="@+id/glProfileRight"
-            app:layout_constraintStart_toEndOf="@+id/tvProfilePicture"
-            app:layout_constraintTop_toTopOf="@+id/tvProfilePicture">
-
-            <TextView
-                android:id="@+id/tvFriendsNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="0"
-                android:textSize="28sp"
-                app:layout_constraintBottom_toTopOf="@+id/tvFriends"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/tvFriends"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:gravity="center"
-                android:text="Friends"
-                android:textSize="35sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         <TextView
             android:id="@+id/tvUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
             android:text=""
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/tvProfilePicture"
-            app:layout_constraintStart_toStartOf="@+id/glProfileLeft" />
+            app:layout_constraintBottom_toTopOf="@+id/ivProfilePicture"
+            app:layout_constraintEnd_toEndOf="@+id/ivProfilePicture"
+            app:layout_constraintStart_toStartOf="@+id/ivProfilePicture" />
 
         <ImageView
-            android:id="@+id/tvProfilePicture"
+            android:id="@+id/ivProfilePicture"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginTop="70dp"
+            android:background="@drawable/layout_profile_picture"
             android:src="@drawable/default_profile_picture"
             app:layout_constraintStart_toStartOf="@+id/glProfileLeft"
             app:layout_constraintTop_toTopOf="parent" />
@@ -96,7 +60,7 @@
             android:text=""
             android:textSize="25sp"
             app:layout_constraintStart_toStartOf="@id/glProfileLeft"
-            app:layout_constraintTop_toBottomOf="@+id/tvProfilePicture" />
+            app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture" />
 
         <TextView
             android:id="@+id/tvLastName"
@@ -109,7 +73,7 @@
             android:textSize="25sp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvFirstName"
-            app:layout_constraintTop_toBottomOf="@+id/tvProfilePicture" />
+            app:layout_constraintTop_toBottomOf="@+id/ivProfilePicture" />
 
 
         <TextView
@@ -125,10 +89,11 @@
 
         <Button
             android:id="@+id/btnLogout"
-            android:text="Logout"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/layout_edittext"
+            android:text="Logout"
             app:backgroundTint="#64DD17"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnEditProfile"
@@ -137,10 +102,11 @@
         <Button
             android:id="@+id/btnEditProfile"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="20dp"
+            android:background="@drawable/layout_edittext"
             android:text="Edit Profile"
             app:backgroundTint="#536DFE"
             app:layout_constraintBottom_toBottomOf="parent"

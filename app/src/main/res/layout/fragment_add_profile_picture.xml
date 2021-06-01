@@ -43,7 +43,7 @@
             android:layout_width="325dp"
             android:layout_height="325dp"
             android:src="@drawable/default_profile_picture"
-            android:background="@color/white"
+            android:background="@drawable/layout_profile_picture"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
